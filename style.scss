@@ -1,0 +1,96 @@
+body {
+  background-color: black;
+}
+
+// SVG ANIMATION
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
+
+@keyframes moveLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes svgAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+svg {
+    opacity: 0;
+    .st0 {
+        display: none;
+      }
+      .st1 {
+        fill: none;
+        stroke: #fffdfd;
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+      }
+      .st2 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 8;
+        stroke-miterlimit: 10;
+      }
+      .st3 {
+        fill: #ffffff;
+      }
+      .st4 {
+        font-family: "MyriadPro-Regular";
+      }
+      .st5 {
+        font-size: 36px;
+      }
+    .svg-text{
+        font-family: "Noto Sans Miao";
+    }
+  &:hover {
+    animation: svgAppear 0.1s forwards;
+    /* aplicar la animación a la línea */
+    #zero {
+      animation: moveLine 2s forwards;
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+      // stroke: red !important;
+    }
+
+    #one {
+      animation: moveLine 2s 0.5s ease-in-out forwards;
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+      // stroke: green !important;
+    }
+
+    #two {
+      animation: moveLine 2s 1s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      // stroke: orange !important;
+    }
+
+    #three {
+      animation: moveLine 2s 2s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    #four {
+      animation: moveLine 2s 2.5s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    .svg-text {
+      opacity: 0;
+      animation: svgAppear 1s 3.5s forwards;
+    }
+  }
+}
+
+// END SVG ANIMATION

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
+body {
+  background-color: black;
+}
+
+@keyframes moveLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes svgAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+svg {
+  opacity: 0;
+}
+svg .st0 {
+  display: none;
+}
+svg .st1 {
+  fill: none;
+  stroke: #fffdfd;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+svg .st2 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+}
+svg .st3 {
+  fill: #ffffff;
+}
+svg .st4 {
+  font-family: "MyriadPro-Regular";
+}
+svg .st5 {
+  font-size: 36px;
+}
+svg .svg-text {
+  font-family: "Noto Sans Miao";
+}
+svg:hover {
+  animation: svgAppear 0.1s forwards;
+  /* aplicar la animación a la línea */
+}
+svg:hover #zero {
+  animation: moveLine 2s forwards;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+}
+svg:hover #one {
+  animation: moveLine 2s 0.5s ease-in-out forwards;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+}
+svg:hover #two {
+  animation: moveLine 2s 1s ease-in-out forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+svg:hover #three {
+  animation: moveLine 2s 2s ease-in-out forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+svg:hover #four {
+  animation: moveLine 2s 2.5s ease-in-out forwards;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+svg:hover .svg-text {
+  opacity: 0;
+  animation: svgAppear 1s 3.5s forwards;
+}/*# sourceMappingURL=style.css.map */
